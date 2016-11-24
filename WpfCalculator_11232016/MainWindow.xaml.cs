@@ -20,9 +20,11 @@ namespace WpfCalculator_11232016
    /// </summary>
    public partial class MainWindow : Window
    {
+
       public MainWindow()
       {
          InitializeComponent();
+         DisplayedValue.Text = "0";
       }
    }
 }

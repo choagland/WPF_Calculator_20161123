@@ -26,8 +26,7 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
       public void ThenTheDisplayedValueIs( int expectedValue )
       {
          var calculator = ScenarioContext.Current.Get<Application>( "subject" );
-         //WhiteTextHelper.DisplayedValue( calculator ).Should().Be( 0 );
-         ScenarioContext.Current.Pending();
+         WhiteTextHelper.DisplayedValue( calculator ).Should().Be( "0" );
       }
 
 

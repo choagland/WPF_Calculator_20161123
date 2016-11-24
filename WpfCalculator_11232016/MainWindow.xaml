@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCalculator_11232016"
         mc:Ignorable="d"
-        Title="WPF Calculator" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="WPF Calculator" Height="350" Width="530">
+<Canvas>    
+    <TextBlock Name="DisplayedValue" 
+               Width="500" 
+               Height="25" 
+               Canvas.Top="10" 
+               Canvas.Left="10" 
+               Background="Gray"
+               TextAlignment="Right" 
+               FontSize="15"
+               Padding="5"
+               AutomationProperties.AutomationId="DisplayedValue"
+               />
+    <Grid/>
+    </Canvas>
+
 </Window>

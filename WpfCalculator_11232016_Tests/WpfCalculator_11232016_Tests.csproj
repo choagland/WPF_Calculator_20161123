@@ -78,8 +78,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="AcceptanceTests\Helpers\WhiteApplicationHelper.cs" />
+    <Compile Include="AcceptanceTests\Helpers\WhiteTextHelper.cs" />
     <Compile Include="AcceptanceTests\Hooks\ScenarioTearDown.cs" />
     <Compile Include="AcceptanceTests\StepDefinitions\CalculatorSteps.cs" />
+    <Compile Include="AcceptanceTests\WindowObjects\WpfCalculatorWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
