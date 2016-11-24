@@ -72,6 +72,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AcceptanceTests\EnteringValues.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnteringValues.feature</DependentUpon>
+    </Compile>
     <Compile Include="AcceptanceTests\CalculatorLaunch.feature.cs">
       <DependentUpon>CalculatorLaunch.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -85,6 +90,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AcceptanceTests\EnteringValues.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EnteringValues.feature.cs</LastGenOutput>
+    </None>
     <None Include="AcceptanceTests\CalculatorLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorLaunch.feature.cs</LastGenOutput>

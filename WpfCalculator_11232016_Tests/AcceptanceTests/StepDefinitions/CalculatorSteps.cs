@@ -29,6 +29,13 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
          WhiteTextHelper.DisplayedValue( calculator ).Should().Be( "0" );
       }
 
+      [When( @"I push the ""(.*)"" button" )]
+      public void WhenIPushTheButton( int buttonValue )
+      {
+         ScenarioContext.Current.Pending();
+      }  
+
+
 
    }
 }
