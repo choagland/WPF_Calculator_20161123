@@ -22,5 +22,14 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
          calculator.GetWindows()[0].Title.Should().Be( name );
       }
 
+      [Then( @"the displayed value is ""(.*)""" )]
+      public void ThenTheDisplayedValueIs( int expectedValue )
+      {
+         var calculator = ScenarioContext.Current.Get<Application>( "subject" );
+         //WhiteTextHelper.DisplayedValue( calculator ).Should().Be( 0 );
+         ScenarioContext.Current.Pending();
+      }
+
+
    }
 }

@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace WpfCalculator_11232016_Tests
+namespace WpfCalculator_11232016_Tests.AcceptanceTests
 {
     using TechTalk.SpecFlow;
     
@@ -47,7 +47,7 @@ namespace WpfCalculator_11232016_Tests
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "CalculatorLaunch")))
             {
-                WpfCalculator_11232016_Tests.CalculatorLaunchFeature.FeatureSetup(null);
+                WpfCalculator_11232016_Tests.AcceptanceTests.CalculatorLaunchFeature.FeatureSetup(null);
             }
         }
         
@@ -81,6 +81,22 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.Given("I have launched the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
  testRunner.Then("the calculators window title is \"WPF Calculator\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Initial Value is Zero")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CalculatorLaunch")]
+        public virtual void InitialValueIsZero()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Initial Value is Zero", ((string[])(null)));
+#line 8
+this.ScenarioSetup(scenarioInfo);
+#line 9
+ testRunner.Given("I have launched the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 10
+ testRunner.Then("the displayed value is \"0\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
