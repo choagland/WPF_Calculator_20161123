@@ -6,6 +6,8 @@
       {
          if ( displayedValue == "0" )
             return numberToAppend;
+         if ( numberToAppend == "C" )
+            return "0";
 
          return displayedValue + numberToAppend;
       }

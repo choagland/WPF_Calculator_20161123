@@ -18,11 +18,20 @@ namespace WpfCalculator_11232016_Tests.UnitTests
       }
 
       [TestMethod]
-      public void Apped_DisplayedValueWasNotZero_AppendsValueToString()
+      public void Append_DisplayedValueWasNotZero_AppendsValueToString()
       {
          string displayedValue = "1";
          string numberToAppend = "1";
          AppendsToDisplayedValue.Append( displayedValue, numberToAppend ).Should().Be( "11" );
       }
+
+      [TestMethod]
+      public void Append_NumberToAppendIsTheClearButton_DisplayedValueIsZero()
+      {
+         string displayedValue = "1";
+         string numbertoAppend = "C";
+         AppendsToDisplayedValue.Append( displayedValue, numbertoAppend ).Should().Be( "0" );
+      }
+
    }
 }
