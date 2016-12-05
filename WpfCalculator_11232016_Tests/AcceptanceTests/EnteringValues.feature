@@ -1,7 +1,7 @@
 ﻿Feature: Entering Values
 
 @UI
-Scenario: Punch In An Addend
+Scenario: Punch In An Numerend
 	Given I have launched the calculator
 	When I push the "1" button
 	And I push the "2" button
@@ -14,3 +14,10 @@ Scenario: Punch In An Addend
 	And I push the "9" button
 	And I push the "0" button
 	Then the displayed value is "1234567890"
+
+@UI
+Scenario: Clear the Displayed Value
+	Given I have launched the calculator
+	When I push the "1" button
+	And I push the "C" button
+	Then the displayed value is "0"
