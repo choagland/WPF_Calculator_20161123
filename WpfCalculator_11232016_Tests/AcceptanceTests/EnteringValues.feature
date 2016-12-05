@@ -21,3 +21,10 @@ Scenario: Clear the Displayed Value
 	When I push the "1" button
 	And I push the "C" button
 	Then the displayed value is "0"
+
+@UI
+Scenario: Type in the numerends
+	Given I have launched the calculator
+	When I type "1"
+	And I type "2"
+	Then the displayed value is "12"

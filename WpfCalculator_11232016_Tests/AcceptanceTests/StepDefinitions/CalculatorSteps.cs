@@ -35,7 +35,17 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
          var calculator = ScenarioContext.Current.Get<Application>( "subject" );
          var entryHelper = new WhiteEntryHelper( calculator );
          entryHelper.PushButton( buttonValue );
-      }  
+      }
+
+      [When( @"I type ""(.*)""" )]
+      public void WhenIType( string  keyPressed )
+      {
+         ScenarioContext.Current.Pending();
+         var calculator = ScenarioContext.Current.Get<Application>();
+         var entryHelper = new WhiteEntryHelper( calculator );
+         entryHelper.PressKey( keyPressed );
+      }
+
 
 
 

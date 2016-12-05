@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestStack.White;
+using TestStack.White.InputDevices;
 using WpfCalculator_11232016_Tests.AcceptanceTests.WindowObjects;
 
 namespace WpfCalculator_11232016_Tests.AcceptanceTests.Helpers
@@ -21,6 +22,11 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.Helpers
       {
          var calculatorWindow = new WpfCalculatorWindow( _application );
          calculatorWindow.PushButton( buttonValue );
+      }
+
+      public void PressKey( string keyPressed )
+      {
+         Keyboard.Instance.Enter( keyPressed );
       }
    }
 }
