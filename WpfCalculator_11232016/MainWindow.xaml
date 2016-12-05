@@ -6,19 +6,50 @@
         xmlns:local="clr-namespace:WpfCalculator_11232016"
         mc:Ignorable="d"
         Title="WPF Calculator" Height="350" Width="530">
-<Canvas>    
-    <TextBlock Name="DisplayedValue" 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="DisplayedValue" 
                Width="500" 
                Height="25" 
-               Canvas.Top="10" 
-               Canvas.Left="10" 
                Background="Gray"
                TextAlignment="Right" 
                FontSize="15"
                Padding="5"
+               Grid.ColumnSpan="2"
                AutomationProperties.AutomationId="DisplayedValue"
                />
-    <Grid/>
-    </Canvas>
+        <Grid Grid.Row="1" Name="GridNumberButtons" 
+              Button.Click="GridNumberButtons_OnClick"
+              AutomationProperties.AutomationId="GridNumberButtons">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Content="7" FontSize="30"/>
+            <Button Content="8" FontSize="30" Grid.Row="0" Grid.Column="1"/>
+            <Button Content="9" FontSize="30" Grid.Row="0" Grid.Column="2"/>
+            <Button Content="4" FontSize="30" Grid.Row="1" Grid.Column="0"/>
+            <Button Content="5" FontSize="30" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="6" FontSize="30" Grid.Row="1" Grid.Column="2"/>
+            <Button Content="1" FontSize="30" Grid.Row="2" Grid.Column="0"/>
+            <Button Content="2" FontSize="30" Grid.Row="2" Grid.Column="1"/>
+            <Button Content="3" FontSize="30" Grid.Row="2" Grid.Column="2"/>
+            <Button Content="0" FontSize="30" Grid.Row="3" Grid.Column="1"/>
+        </Grid>
+    </Grid>
 
 </Window>

@@ -26,13 +26,15 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
       public void ThenTheDisplayedValueIs( int expectedValue )
       {
          var calculator = ScenarioContext.Current.Get<Application>( "subject" );
-         WhiteTextHelper.DisplayedValue( calculator ).Should().Be( "0" );
+         WhiteTextHelper.DisplayedValue( calculator ).Should().Be( expectedValue.ToString() );
       }
 
       [When( @"I push the ""(.*)"" button" )]
-      public void WhenIPushTheButton( int buttonValue )
+      public void WhenIPushTheButton( string buttonValue )
       {
-         ScenarioContext.Current.Pending();
+         var calculator = ScenarioContext.Current.Get<Application>( "subject" );
+         var entryHelper = new WhiteEntryHelper( calculator );
+         entryHelper.PushButton( buttonValue );
       }  
 
 
