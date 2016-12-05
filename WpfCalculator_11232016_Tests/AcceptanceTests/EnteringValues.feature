@@ -28,3 +28,17 @@ Scenario: Type in the numerends
 	When I type "1"
 	And I type "2"
 	Then the displayed value is "12"
+
+@UI
+Scenario: Clear with the C key
+	Given I have launched the calculator
+	When I push the "1" button
+	And I type "C" 
+	Then the displayed value is "0"
+
+@UI
+Scenario: Reject letters other than C
+	Given I have launched the calculator
+	When I type "1"
+	And I type "abdefghijklmnopqrstuvwxyz"
+	Then the displayed value is "1"
