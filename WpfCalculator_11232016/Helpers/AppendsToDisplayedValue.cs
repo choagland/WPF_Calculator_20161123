@@ -9,7 +9,11 @@
          if ( numberToAppend == "C" )
             return "0";
 
-         return displayedValue + numberToAppend;
+         if ( ValidatesTextInput.IsValidForCalculator( numberToAppend ) )
+         {
+            return displayedValue + numberToAppend;
+         }
+         return displayedValue;
       }
    }
 }

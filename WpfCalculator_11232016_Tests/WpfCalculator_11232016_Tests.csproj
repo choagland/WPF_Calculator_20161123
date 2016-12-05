@@ -92,6 +92,7 @@
     <Compile Include="AcceptanceTests\WindowObjects\WpfCalculatorWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\AppendsToDisplayedValueTests.cs" />
+    <Compile Include="UnitTests\ValidatesTextInputTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AcceptanceTests\EnteringValues.feature">
