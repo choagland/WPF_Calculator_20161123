@@ -26,7 +26,8 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.Helpers
 
       public void PressKey( string keyPressed )
       {
-         Keyboard.Instance.Enter( keyPressed );
+         var calculatorWindow = new WpfCalculatorWindow( _application );
+         calculatorWindow.TypeKey( keyPressed );
       }
    }
 }

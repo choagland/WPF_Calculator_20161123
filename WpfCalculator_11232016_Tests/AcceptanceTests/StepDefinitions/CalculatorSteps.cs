@@ -18,7 +18,7 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
       [Then( @"the calculators window title is ""(.*)""" )]
       public void ThenTheCalculatorsWindowTitleIs( string name )
       {
-         var calculator = ScenarioContext.Current.Get<Application>("subject");
+         var calculator = ScenarioContext.Current.Get<Application>( "subject" );
          calculator.GetWindows()[0].Title.Should().Be( name );
       }
 
@@ -38,10 +38,10 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
       }
 
       [When( @"I type ""(.*)""" )]
-      public void WhenIType( string  keyPressed )
+      public void WhenIType( string keyPressed )
       {
-         ScenarioContext.Current.Pending();
-         var calculator = ScenarioContext.Current.Get<Application>();
+         //ScenarioContext.Current.Pending();
+         var calculator = ScenarioContext.Current.Get<Application>( "subject" );
          var entryHelper = new WhiteEntryHelper( calculator );
          entryHelper.PressKey( keyPressed );
       }

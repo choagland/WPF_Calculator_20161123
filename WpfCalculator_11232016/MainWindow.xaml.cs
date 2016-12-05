@@ -43,5 +43,10 @@ namespace WpfCalculator_11232016
          _displayedValue = AppendsToDisplayedValue.Append( _displayedValue, numberToAppend );
          DisplayedValue.Text = _displayedValue; //this seems dumb but I don't know what to do about it yet
       }
+
+      private void MainWindow_OnTextInput( object sender, TextCompositionEventArgs e )
+      {
+         AppendButtonValueToCurrentNumerend( e.Text );
+      }
    }
 }

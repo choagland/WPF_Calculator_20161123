@@ -31,5 +31,11 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.WindowObjects
          var numberButton = (Button) _window.Get( SearchCriteria.ByText( buttonValue ) );
          numberButton.Click();
       }
+
+      public void TypeKey( string keyPressed )
+      {
+         _window.Focus();
+         _window.Keyboard.Enter( keyPressed );
+      }
    }
 }
