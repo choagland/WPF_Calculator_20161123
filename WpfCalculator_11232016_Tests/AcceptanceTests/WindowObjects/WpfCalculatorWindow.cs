@@ -28,8 +28,8 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.WindowObjects
 
       public void PushButton( string buttonValue )
       {
-         var numberButton = (Button) _window.Get( SearchCriteria.ByText( buttonValue ) );
-         numberButton.Click();
+         var button = (Button) _window.Get( SearchCriteria.ByText( buttonValue ) );
+         button.Click();
       }
 
       public void TypeKey( string keyPressed )
