@@ -6,6 +6,6 @@ namespace MyCalculator
    {
       double GetCurrentResult();
       void SetCurrentNumber( double number );
-      void SetCurrentOpetation( Operation operation );
+      void SetCurrentOperation( string operationSelection );
    }
 }

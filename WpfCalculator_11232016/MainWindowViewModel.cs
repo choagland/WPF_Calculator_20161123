@@ -17,5 +17,10 @@ namespace WpfCalculator_11232016
          _calculator = calculator;
          _currentResult = 0;
       }
+
+      public void SetCurrentOperation( string content )
+      {
+         _calculator.SetCurrentOperation( content );
+      }
    }
 }

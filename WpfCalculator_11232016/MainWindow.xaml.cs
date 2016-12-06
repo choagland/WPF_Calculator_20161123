@@ -50,5 +50,11 @@ namespace WpfCalculator_11232016
       {
          AppendButtonValueToCurrentNumerend( e.Text );
       }
+
+      private void GridOperationButtons_OnClick( object sender, RoutedEventArgs e )
+      {
+         var operationButton = e.Source as Button;
+         _mainWindowViewModel.SetCurrentOperation( (string) operationButton.Content );
+      }
    }
 }
