@@ -22,11 +22,13 @@ namespace WpfCalculator_11232016
    public partial class MainWindow : Window
    {
       private string _displayedValue;
+      private MainWindowViewModel _mainWindowViewModel;
       public MainWindow()
       {
          InitializeComponent();
          _displayedValue = "0";
          DisplayedValue.Text = _displayedValue;
+         _mainWindowViewModel = new MainWindowViewModel( new MyCalculator.Calculator() );
       }
 
       private void GridNumberButtons_OnClick( object sender, RoutedEventArgs e )
