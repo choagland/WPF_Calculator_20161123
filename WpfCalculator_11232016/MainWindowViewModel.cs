@@ -21,7 +21,7 @@ namespace WpfCalculator_11232016
 
       public void SetCurrentOperation( string content )
       {
-         _calculator.SetCurrentOperation( MathStrategyFactory.SelectMathStrategy(content) );
+         _calculator.SetCurrentOperation( MathStrategyFactory.SelectMathStrategy( content ) );
       }
 
       public void SetCurrentNumber( string number )

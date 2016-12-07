@@ -94,6 +94,11 @@
     <Compile Include="AcceptanceTests\Helpers\WhiteTextHelper.cs" />
     <Compile Include="AcceptanceTests\Hooks\ScenarioTearDown.cs" />
     <Compile Include="AcceptanceTests\StepDefinitions\CalculatorSteps.cs" />
+    <Compile Include="AcceptanceTests\Subtracting.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Subtracting.feature</DependentUpon>
+    </Compile>
     <Compile Include="AcceptanceTests\WindowObjects\WpfCalculatorWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\AppendsToDisplayedValueTests.cs" />
@@ -111,6 +116,10 @@
     <None Include="AcceptanceTests\CalculatorLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorLaunch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTests\Subtracting.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Subtracting.feature.cs</LastGenOutput>
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />

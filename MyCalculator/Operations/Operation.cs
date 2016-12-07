@@ -3,6 +3,7 @@
    public enum Operation
    {
       InitialState,
-      Add
+      Add,
+      Subtract
    }
 }

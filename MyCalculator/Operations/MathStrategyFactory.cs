@@ -19,6 +19,10 @@ namespace MyCalculator.Operations
             {
                return new AdditionStrategy();
             }
+            case Operation.Subtract:
+            {
+               return new SubtractionStrategy();
+            }
             default:
             {
                throw new NotImplementedException();
@@ -33,6 +37,10 @@ namespace MyCalculator.Operations
             case ( "+" ):
             {
                return SelectMathStrategy(Operation.Add);
+            }
+            case ( "-" ):
+            {
+               return SelectMathStrategy( Operation.Subtract );
             }
             default:
             {
@@ -57,6 +65,14 @@ namespace MyCalculator.Operations
       public double Calculate( double x, double y )
       {
          return x + y;
+      }
+   }
+
+   public class SubtractionStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return x - y;
       }
    }
 }
