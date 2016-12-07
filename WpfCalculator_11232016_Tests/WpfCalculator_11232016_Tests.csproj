@@ -93,6 +93,11 @@
     <Compile Include="AcceptanceTests\Helpers\WhiteEntryHelper.cs" />
     <Compile Include="AcceptanceTests\Helpers\WhiteTextHelper.cs" />
     <Compile Include="AcceptanceTests\Hooks\ScenarioTearDown.cs" />
+    <Compile Include="AcceptanceTests\Multiplying.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Multiplying.feature</DependentUpon>
+    </Compile>
     <Compile Include="AcceptanceTests\StepDefinitions\CalculatorSteps.cs" />
     <Compile Include="AcceptanceTests\Subtracting.feature.cs">
       <AutoGen>True</AutoGen>
@@ -116,6 +121,10 @@
     <None Include="AcceptanceTests\CalculatorLaunch.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorLaunch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTests\Multiplying.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Multiplying.feature.cs</LastGenOutput>
     </None>
     <None Include="AcceptanceTests\Subtracting.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
