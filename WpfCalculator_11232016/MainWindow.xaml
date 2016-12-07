@@ -55,12 +55,12 @@
             <Button Content="0" FontSize="30" Grid.Row="3" Grid.Column="1"/>
             <Button Content="C" FontSize="30" Grid.Row="3" Grid.Column="0"/>
         </Grid>
-        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Margin="5" Button.Click="GridOperationButtons_OnClick">
-            <Button Content="+" FontSize="30" Margin="5" />
-            <Button Content="-" FontSize="30" Margin="5" />
-            <Button Content="*" FontSize="30" Margin="5" />
-            <Button Content="/" FontSize="30" Margin="5" />
-            <Button Content="=" FontSize="30" Margin="5" />
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1" Margin="5">
+            <Button Content="+" FontSize="30" Margin="5" Click="GridOperationButtons_OnClick" />
+            <Button Content="-" FontSize="30" Margin="5" Click="GridOperationButtons_OnClick"/>
+            <Button Content="*" FontSize="30" Margin="5" Click="GridOperationButtons_OnClick"/>
+            <Button Content="/" FontSize="30" Margin="5" Click="GridOperationButtons_OnClick"/>
+            <Button Content="=" FontSize="30" Margin="5" Click="EqualsButton_OnClick"/>
         </StackPanel>
     </Grid>
 

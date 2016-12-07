@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,13 +22,13 @@ namespace WpfCalculator_11232016
    /// </summary>
    public partial class MainWindow : Window
    {
-      private string _displayedValue;
+      private string _currentValue;
       private MainWindowViewModel _mainWindowViewModel;
       public MainWindow()
       {
          InitializeComponent();
-         _displayedValue = "0";
-         DisplayedValue.Text = _displayedValue;
+         _currentValue = "0";
+         DisplayedValue.Text = _currentValue;
          _mainWindowViewModel = new MainWindowViewModel( new MyCalculator.Calculator() );
       }
 
@@ -42,8 +43,8 @@ namespace WpfCalculator_11232016
 
       private void AppendButtonValueToCurrentNumerend( string numberToAppend )
       {
-         _displayedValue = AppendsToDisplayedValue.Append( _displayedValue, numberToAppend );
-         DisplayedValue.Text = _displayedValue; //this seems dumb but I don't know what to do about it yet
+         _currentValue = AppendsToDisplayedValue.Append( _currentValue, numberToAppend );
+         DisplayedValue.Text = _currentValue; //this seems dumb but I don't know what to do about it yet
       }
 
       private void MainWindow_OnTextInput( object sender, TextCompositionEventArgs e )
@@ -54,7 +55,17 @@ namespace WpfCalculator_11232016
       private void GridOperationButtons_OnClick( object sender, RoutedEventArgs e )
       {
          var operationButton = e.Source as Button;
+         _mainWindowViewModel.SetCurrentNumber( _currentValue );
          _mainWindowViewModel.SetCurrentOperation( (string) operationButton.Content );
+         _currentValue = "0";
+      }
+
+      private void EqualsButton_OnClick( object sender, RoutedEventArgs e )
+      {
+         _mainWindowViewModel.SetCurrentNumber( _currentValue );
+         _currentValue = _mainWindowViewModel.GetCurrentResult().ToString( CultureInfo.InvariantCulture );
+         DisplayedValue.Text = _currentValue;
+         _currentValue = "0";
       }
    }
 }

@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Net;
+using MyCalculator.Operations;
 
 namespace MyCalculator.Operations
 {
-   public class MathStrategyFactory
+   public static class MathStrategyFactory
    {
-      public IMathStrategy SelectMathStrategy( Operation operation )
+      public static IMathStrategy SelectMathStrategy( Operation operation )
       {
          switch ( operation )
          {
@@ -22,7 +25,24 @@ namespace MyCalculator.Operations
             }
          }
       }
+
+      public static IMathStrategy SelectMathStrategy( string strategySelection )
+      {
+         switch ( strategySelection )
+         {
+            case ( "+" ):
+            {
+               return SelectMathStrategy(Operation.Add);
+            }
+            default:
+            {
+               throw new NotImplementedException();
+            }
+         }
+      }
    }
+
+ 
 
    public class InitialMathStrategy : IMathStrategy
    {

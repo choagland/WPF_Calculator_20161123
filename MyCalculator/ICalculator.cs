@@ -6,6 +6,6 @@ namespace MyCalculator
    {
       double GetCurrentResult();
       void SetCurrentNumber( double number );
-      void SetCurrentOperation( string operationSelection );
+      void SetCurrentOperation( IMathStrategy mathStrategy );
    }
 }

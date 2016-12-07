@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyCalculator;
+using MyCalculator.Operations;
 
 namespace WpfCalculator_11232016
 {
@@ -20,7 +21,19 @@ namespace WpfCalculator_11232016
 
       public void SetCurrentOperation( string content )
       {
-         _calculator.SetCurrentOperation( content );
+         _calculator.SetCurrentOperation( MathStrategyFactory.SelectMathStrategy(content) );
+      }
+
+      public void SetCurrentNumber( string number )
+      {
+         double parsedNumber;
+         double.TryParse( number, out parsedNumber );
+         _calculator.SetCurrentNumber( parsedNumber );
+      }
+
+      public double GetCurrentResult()
+      {
+         return _calculator.GetCurrentResult();
       }
    }
 }

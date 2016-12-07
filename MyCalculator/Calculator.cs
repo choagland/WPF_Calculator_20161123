@@ -1,25 +1,31 @@
-﻿using System;
-using MyCalculator.Operations;
+﻿using MyCalculator.Operations;
 
 namespace MyCalculator
 {
    public class Calculator : ICalculator
    {
+      private IMathStrategy _mathStrategy;
+      private double _currentResult;
 
+      public Calculator()
+      {
+         _currentResult = 0;
+         _mathStrategy = MathStrategyFactory.SelectMathStrategy( Operation.InitialState );
+      }
 
       public double GetCurrentResult()
       {
-         throw new NotImplementedException();
+         return _currentResult;
       }
 
       public void SetCurrentNumber( double number )
       {
-         throw new NotImplementedException();
+         _currentResult = _mathStrategy.Calculate( _currentResult, number );
       }
 
-      public void SetCurrentOperation( string operationSelection )
+      public void SetCurrentOperation( IMathStrategy mathStrategy )
       {
-         throw new NotImplementedException();
+         _mathStrategy = mathStrategy;
       }
    }
 }
