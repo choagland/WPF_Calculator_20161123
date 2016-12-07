@@ -4,6 +4,7 @@
    {
       InitialState,
       Add,
-      Subtract
+      Subtract,
+      Multiply
    }
 }
