@@ -42,3 +42,11 @@ Scenario: Reject letters other than C
 	When I type "1"
 	And I type "abdefghijklmnopqrstuvwxyz"
 	Then the displayed value is "1"
+
+@UI
+Scenario: Allow entry of decimal values from the keyboard
+	Given I have launched the calculator
+	When I type "1"
+	And I type "."
+	And I type "2"
+	Then the displayed value is "1.2"
