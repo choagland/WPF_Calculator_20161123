@@ -16,6 +16,14 @@ Scenario: Punch In An Numerend
 	Then the displayed value is "1234567890"
 
 @UI
+Scenario: Use the decimal button
+	Given I have launched the calculator
+	When I push the "1" button
+	And I push the "." button
+	And I push the "2" button
+	Then the displayed value is "1.2"
+
+@UI
 Scenario: Clear the Displayed Value
 	Given I have launched the calculator
 	When I push the "1" button
