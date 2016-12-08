@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Net;
-using MyCalculator.Operations;
 
 namespace MyCalculator.Operations
 {

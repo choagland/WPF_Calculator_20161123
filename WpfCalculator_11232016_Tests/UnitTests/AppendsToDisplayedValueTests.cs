@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WpfCalculator_11232016;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FluentAssertions;
 using WpfCalculator_11232016.Helpers;
 

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WpfCalculator_11232016.Helpers
+﻿namespace WpfCalculator_11232016.Helpers
 {
    public static class ValidatesTextInput
    {
