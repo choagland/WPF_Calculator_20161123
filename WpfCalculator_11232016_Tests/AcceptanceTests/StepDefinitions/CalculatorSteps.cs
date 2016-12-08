@@ -23,7 +23,7 @@ namespace WpfCalculator_11232016_Tests.AcceptanceTests.StepDefinitions
       }
 
       [Then( @"the displayed value is ""(.*)""" )]
-      public void ThenTheDisplayedValueIs( int expectedValue )
+      public void ThenTheDisplayedValueIs( double expectedValue )
       {
          var calculator = ScenarioContext.Current.Get<Application>( "subject" );
          WhiteTextHelper.DisplayedValue( calculator ).Should().Be( expectedValue.ToString() );

@@ -27,6 +27,10 @@ namespace MyCalculator.Operations
             {
                return new MultiplicationStrategy();
             }
+            case Operation.Divide:
+            {
+               return new DivisionStrategy();
+            }
             default:
             {
                throw new NotImplementedException();
@@ -50,6 +54,11 @@ namespace MyCalculator.Operations
             {
                return SelectMathStrategy( Operation.Multiply );
             }
+            case ( "/" ):
+            {
+               return SelectMathStrategy( Operation.Divide );
+            }
+           
             default:
             {
                throw new NotImplementedException();
@@ -89,6 +98,14 @@ namespace MyCalculator.Operations
       public double Calculate( double x, double y )
       {
          return x * y;
+      }
+   }
+
+   public class DivisionStrategy : IMathStrategy
+   {
+      public double Calculate( double x, double y )
+      {
+         return x / y;
       }
    }
 }
